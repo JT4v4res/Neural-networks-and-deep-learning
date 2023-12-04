@@ -22,8 +22,7 @@ class NetworkLayer:
 
         for i in range(0, len(neuron_inputs)):
             for j in range(0, len(self.weights)):
-                print(neuron_inputs[i], ' * ', self.weights[j])
-                self.neurons[j] = sigmoid(np.dot(neuron_inputs[i], self.weights[j]) + bias)
+                self.neurons[j] = sigmoid(np.sum(np.dot(neuron_inputs[i], self.weights[j])) + bias)
 
         return self.neurons
 
@@ -33,15 +32,16 @@ class NeuralNetwork:
         self.neuron_layers = []
         self.total_layers = 0
         self.bias = 0
+        self.loss_function = 0
+        self.y_pred = []
 
     def train(self, epoch, entry, correct):
         for i in range(0, epoch):
             feed_input = entry
+            self.y_pred = []
             for z in range(0, len(self.neuron_layers)):
                 feed_input = self.neuron_layers[z].affine_function(np.asarray(feed_input), self.bias)
-
-            answer = feed_input.sum()
-            print(answer)
+                print(feed_input)
 
 
 inputs = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
@@ -49,5 +49,6 @@ outputs = np.array([0, 1, 1, 0])
 
 neuralNetwork = NeuralNetwork(2)
 neuralNetwork.neuron_layers.append(NetworkLayer(3, 2))
+neuralNetwork.neuron_layers.append(NetworkLayer(1, 3))
 
 neuralNetwork.train(1, inputs, outputs)
