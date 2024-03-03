@@ -61,7 +61,7 @@ class Perceptron:
                 i += 1
 
             print(
-                f'epoch {current}/{epoch}, loss: {((self.loss_function) / 100):.2}, accuracy: {(count / len(correct)) * 100}%')
+                f'epoch {current}/{epoch}, loss: {(self.loss_function / 100):.2}, accuracy: {(count / len(correct)) * 100}%')
             current += 1
 
 
@@ -75,3 +75,16 @@ perceptron.train(input=input, epoch=10, correct=correct)
 perceptron2 = Perceptron(entry_lenght=len(X[0]))
 
 perceptron2.train(input=X, epoch=300, correct=y)
+
+weights = perceptron2.weights
+bias = perceptron2.bias
+
+x_min, x_max = X.min(), X.max()
+x1 = np.linspace(x_min, x_max)
+y1 = -(weights[0] / weights[1]) * x1 - bias / weights[1]
+
+plt.scatter(X[:,0], X[:,1], c=y)
+plt.plot(x1, y1, '-', color='red', label='Linha do perceptron')
+plt.title("Linha do perceptron")
+plt.legend()
+plt.show()
