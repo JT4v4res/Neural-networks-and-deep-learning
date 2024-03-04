@@ -17,6 +17,12 @@ como funções de ativação, otimizadores e momentum, funções de custo, atual
 
 ### Sumário
 
+- [Perceptron](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/perceptron/perceptron.md)
+- [Rede multi-camada](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/multi_layer_neural_network/neural_network.md)
+- [Funções de ativação](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/activation_functions/activations.md)
+- [Funções de perda](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/loss_functions/loss%20functions.md)
+- [Regularização](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/regularization/regularization.md)
+
 ## English
 
 Artificial Neural Networks (ANNs) are powerful machine learning algorithms capable of delivering exceptional performance
@@ -35,3 +41,9 @@ how the number of layers influences learning but also how other hyperparameters,
 weight updates with backpropagation, and regularization techniques, impact network performance.
 
 ### Summary
+
+- [Perceptron](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/perceptron/perceptron.md)
+- [Multi-layer network](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/multi_layer_neural_network/neural_network.md)
+- [Activation functions](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/activation_functions/activations.md)
+- [Loss functions](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/loss_functions/loss%20functions.md)
+- [Regularization](https://github.com/JT4v4res/Neural-networks-and-deep-learning/blob/master/regularization/regularization.md)
