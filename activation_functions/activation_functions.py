@@ -45,7 +45,7 @@ def softmax(x, y_oh=None, derivative=False):
         y_pred[k] = pk * (1.0 - pk)
         return y_pred
     exp = np.exp(x)
-    return exp / np.sum(exp, axis=0, keepdims=True)
+    return exp / np.sum(exp, axis=1, keepdims=True)
 
 
 def tanh(x, derivative=False):
