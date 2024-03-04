@@ -35,7 +35,6 @@ def neg_log_likelihood(y_oh, y_pred, derivative=False):
         return y_pred
     return np.mean(-np.log(pk))
 
-
 def softmax_neg_log_likelihood(y_oh, y_pred, derivative=False):
     y_softmax = softmax(y_pred)
     if derivative:
